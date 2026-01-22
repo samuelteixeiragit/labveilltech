@@ -18,7 +18,7 @@ theme = 'yassi'
   home = ["HTML", "RSS", "JSON"]
 
 [params]
-  CoverImage = '/images/star.png'
+  CoverImage = '/labveilltech/images/star.png'
   CoverImageWidth = '150'
   
   # Search
