@@ -1,0 +1,45 @@
+{{ define "main" }}
+
+{{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
+{{ $dateHuman := .Date | time.Format ":date_long" }}
+
+<article class="post-article">
+  <header class="post-header">
+    <h1 class="post-title">{{ .Title }}</h1>
+    <div class="post-meta">
+      <time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
+      <span class="post-meta-separator">•</span>
+      <span>{{.ReadingTime}} min de lecture</span>
+      {{ if .Params.categories }}
+      <span class="post-meta-separator">•</span>
+      {{ partial "terms.html" (dict "taxonomy" "categories" "page" .) }}
+      {{ end }}
+      {{ if .Params.tags }}
+      <span class="post-meta-separator">•</span>
+      {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
+      {{ end }}
+    </div>
+    {{/* Summary masqué pour éviter les doublons de titres */}}
+  </header>
+
+  {{ if and .Params.main_image (ne .Title "À propos") }}
+  <div class="post-image">
+    <img src="{{ .Params.main_image }}" alt="{{ .Title }}">
+  </div>
+  {{ end }}
+  
+  {{ if eq .Title "À propos" }}
+  <style>
+    .post-image { display: none !important; }
+    .post-summary img { display: none !important; }
+  </style>
+  {{ end }}
+
+  <div class="post-content">
+    {{ .Content }}
+  </div>
+
+  {{ partial "giscus.html" . }}
+</article>
+
+{{ end }}

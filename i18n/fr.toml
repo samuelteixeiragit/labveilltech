@@ -1,0 +1,9 @@
+# Formats de date - Hugo traduira automatiquement les noms de mois
+[date_long]
+other = "2 January 2006"
+
+[date_medium]
+other = "2 January 2006"
+
+[date_short]
+other = "02/01/2006"
