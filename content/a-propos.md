@@ -6,7 +6,7 @@ draft = false
 
 ## Mon Ikigai
 
-![Mon Ikigai](/ikigai.png)
+![Mon Ikigai](/labveilltech/images/ikigai.png)
 
 <!-- Vous pouvez ajouter votre contenu sur votre Ikigai ici -->
 
