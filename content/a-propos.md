@@ -6,7 +6,7 @@ draft = false
 
 ## Mon Ikigai
 
-![Mon Ikigai](/images/ikigai.png)
+![Mon Ikigai](/ikigai.png)
 
 <!-- Vous pouvez ajouter votre contenu sur votre Ikigai ici -->
 
